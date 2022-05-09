@@ -22,42 +22,42 @@ mainElement.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-let postList = document.getElementById("post-list");
-let post = "";
+let cardList = document.getElementById("card-list");
+let card = "";
 
 restoData.restaurants.forEach((restaurant) => {
-  post += `
-        <article class="post-item">
-            <div class="post-thumbnail">
+  card += `
+        <article class="card-item">
+            <div class="card-thumbnail">
                 <img src="${restaurant.pictureId}" alt="Thumbnail ${restaurant.name}">
             </div>
-            <div class="post-header">
+            <div class="card-header">
                     <span><i class="fas fa-map-marker-alt"></i> ${restaurant.city}</span>
                     <span><i class="fas fa-star"></i> ${restaurant.rating}</span>
                 </div>
-            <div class="post-content">
-            <h3 class="post-title"><a href="#">${restaurant.name}</a></h3>
-                <p class="post-description">${restaurant.description}</p>
+            <div class="card-content">
+            <h3 class="card-title"><a href="#">${restaurant.name}</a></h3>
+                <p class="card-description">${restaurant.description}</p>
             </div>
         </article>
     `;
 });
 
-postList.innerHTML = post;
+cardList.innerHTML = card;
 
 let factList = document.getElementById("fact-list");
 let fact = "";
 
 restoData.factFood.forEach((factFood) => {
   fact += `
-        <article class="post-item">
-            <div class="post-thumbnail">
+        <article class="card-item">
+            <div class="card-thumbnail">
                 <img src="${factFood.pictureId}" alt="Thumbnail ${factFood.name}">
             </div>
 
-            <div class="post-content">
-                <h3 class="post-title"><a href="#">${factFood.name}</a></h3>
-                <p class="post-description">${factFood.description}</p>
+            <div class="card-content">
+                <h3 class="card-title"><a href="#">${factFood.name}</a></h3>
+                <p class="card-description">${factFood.description}</p>
             </div>
         </article>
     `;

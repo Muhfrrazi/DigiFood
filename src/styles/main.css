@@ -12,20 +12,6 @@ body {
   background-color: #f0f0f0;
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background-color: #f1d00a;
-  color: #21325e;
-  padding: 8px;
-  z-index: 9;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
 #navbar {
   padding: 0 3rem;
   display: flex;
@@ -168,47 +154,43 @@ a {
   font-weight: lighter;
 }
 
-.post-list {
+.card-list {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
   margin: 0 auto;
 }
 
-.post-thumbnail img {
+.card-thumbnail img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.post-list .post-item {
+.card-list .card-item {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 0rem 0rem 2rem;
 }
 
-.post-item .post-content {
+.card-item .card-content {
   padding: 1rem;
 }
 
-.post-item .post-title {
+.card-item .card-title {
   margin-bottom: 0px;
   margin-top: 10px;
   font-family: "Nunito", sans-serif;
 }
 
-.post-item .post-title a {
+.card-item .card-title a {
   color: #000000;
   display: block;
   height: 44px;
   line-height: 44px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
 }
 
-.post-item .post-header {
+.card-item .card-header {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
@@ -217,24 +199,24 @@ a {
   background-color: #21325e;
 }
 
-.post-item .post-header .fa-map-marker-alt {
+.card-item .card-header .fa-map-marker-alt {
   color: #da190b;
 }
 
-.post-item .post-header .fa-star {
+.card-item .card-header .fa-star {
   color: #f1d00a;
 }
 
-.post-item .post-description {
+.card-item .card-description {
   margin: 0 0 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
 
-.post-item:hover {
+.card-item:hover {
   box-shadow: 0 6px 6px 0 rgb(15, 64, 129);
   cursor: pointer;
 }
@@ -251,6 +233,20 @@ a {
   background-color: #21325e;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #f1d00a;
+  color: #21325e;
+  padding: 8px;
+  z-index: 9;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 @media only screen and (min-width: 768px) {
   #menu-button,
   #close-button {
@@ -265,11 +261,11 @@ a {
     display: none;
   }
 
-  .post-list .post-item {
+  .card-list .card-item {
     margin: 0rem 1rem 2rem;
   }
 
-  .post-list {
+  .card-list {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -279,7 +275,7 @@ a {
 }
 
 @media only screen and (min-width: 1024px) {
-  .post-list {
+  .card-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
