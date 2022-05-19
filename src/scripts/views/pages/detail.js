@@ -26,9 +26,9 @@ const Detail = {
     loading.innerHTML = '<div class="loader"></div>';
 
     try {
-      const restaurant = await RestaurantSource.detailRestaurant(url.id);
-      const restaurantContainer = document.querySelector("#restaurant");
-
+      const restaurant = await ResrtaurentSource.detailRestaurant(url.id);
+      const restaurantContainer = document.querySelector("#detail-rest");
+      
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
       LikeButtonInitiator.init({
@@ -42,7 +42,6 @@ const Detail = {
           address: restaurant.address,
           description: restaurant.description,
           menus: restaurant.menus,
-          customerReview: restaurant.customerReview,
         },
       });
       loading.style.display = "none";
