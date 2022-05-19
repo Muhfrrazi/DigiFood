@@ -1,6 +1,6 @@
 /* eslint-disable new-cap */
 import UrlParser from "../../routes/url-parser";
-import ResrtaurentSource from "../../data/restaurant-source";
+import RestaurantSource from "../../data/restaurant-source";
 import { createRestaurantDetailTemplate } from "../templates/creator-template";
 import LikeButtonInitiator from "../../utils/like-button-initiator";
 import PostReview from "../../utils/post-review";
@@ -26,7 +26,7 @@ const Detail = {
     loading.innerHTML = '<div class="loader"></div>';
 
     try {
-      const restaurant = await ResrtaurentSource.detailRestaurant(url.id);
+      const restaurant = await RestaurantSource.detailRestaurant(url.id);
       const restaurantContainer = document.querySelector("#restaurant");
 
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
