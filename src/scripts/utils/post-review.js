@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import RestaurantSource from "../data/restaurant-source";
+import ResrtaurentSource from "../data/restaurant-source";
 
 const PostReview = (url, name, review) => {
   const dataInput = {
@@ -7,7 +7,7 @@ const PostReview = (url, name, review) => {
     name,
     review,
   };
-  RestaurantSource.postRestaurant(dataInput);
+  ResrtaurentSource.postRestaurant(dataInput);
 
   const reviewContainer = document.querySelector(".detail-review");
   const options = { year: "numeric", month: "long", day: "numeric" };
