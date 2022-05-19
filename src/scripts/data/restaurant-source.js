@@ -1,7 +1,7 @@
 /* eslint-disable new-cap */
 import API_ENDPOINT from "../globals/api-endpoint";
 
-class ResrtaurentSource {
+class RestaurantSource {
   static async listRestaurants() {
     const response = await fetch(API_ENDPOINT.LIST);
     const responseJson = await response.json();
@@ -27,4 +27,4 @@ class ResrtaurentSource {
   }
 }
 
-export default ResrtaurentSource;
+export default RestaurantSource;

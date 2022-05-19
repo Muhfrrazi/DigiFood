@@ -22,6 +22,7 @@ const PostReview = (url, name, review) => {
         ${review}
       </div>
     </div>
+
     `;
   reviewContainer.innerHTML += newReview;
 };
