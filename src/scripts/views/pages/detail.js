@@ -27,7 +27,7 @@ const Detail = {
 
     try {
       const restaurant = await ResrtaurentSource.detailRestaurant(url.id);
-      const restaurantContainer = document.querySelector("#restaurant");
+      const restaurantContainer = document.querySelector("#detail-rest");
 
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
@@ -42,7 +42,6 @@ const Detail = {
           address: restaurant.address,
           description: restaurant.description,
           menus: restaurant.menus,
-          customerReview: restaurant.customerReview,
         },
       });
       loading.style.display = "none";
