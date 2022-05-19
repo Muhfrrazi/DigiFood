@@ -11,6 +11,8 @@
   },
   "rules": {
     "quotes": "off",
-    "prefer-const": "off"
+    "prefer-const": "off",
+    "linebreak-style": "off",
+    "no-console": "off"
   }
 }

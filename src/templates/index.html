@@ -5,54 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple web app showing you the best dish ever served and food fact" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#21325e" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="icon" href="favicon.png">
     <title>DigiFoods</title>
     <script src="https://kit.fontawesome.com/6213932414.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@400;700&family=Saira:wght@100;400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <a href="#main-content" class="skip-link">Menuju ke konten</a>
     <header>
-        <nav id="navbar">
-            <a href="/" class="navbar-brand">DF</a>
-            <button id="menu-button" aria-label="navigation-menu"><i class="fas fa-bars"></i></button>
-            <div class="nav">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="#">Favorite</a>
-                <a class="nav-link" href="https://www.linkedin.com/in/muhammad-fachrurrazi-6484401a2/"
-                    target="_blank">About Us</a>
-            </div>
-        </nav>
-        <nav id="sidebar">
-            <div id="sidebar-menu" class="nav">
-                <button id="close-button" aria-label="close-navigation-menu"><i class="fas fa-times"></i></button>
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="#">Favorite</a>
-                <a class="nav-link" href="https://www.linkedin.com/in/muhammad-fachrurrazi-6484401a2/"
-                    target="_blank">About Us</a>
-            </div>
-        </nav>
-        <section id="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Digi Foods!</h1>
-                <p class="hero-tag">Find Restaurant with delicious food</p>
-            </div>
-        </section>
+        <nav-web></nav-web>
+        <hero-web></hero-web>
     </header>
-    <main id="main-content">
-        <h2 class="content-title">Our Best Offering <span class="content-desc"><br>Let's Explore Restaurant in Your
-                Area</span>
-        </h2>
-        <section id="card-list" class="card-list">
-
-        </section>
-        <h2 class="content-title">Food Fact <span class="content-desc"><br>Fun Fact About All Foods</span></h2>
-        <section id="fact-list" class="card-list fact">
-
-        </section>
-    </main>
-    <footer id="footer">
-        Copyright © 2022 - DIGI FOODS | Muhammad Fachrurrazi
-    </footer>
+    <main id="main-content" tabindex="0"></main>
+    <foot-web></foot-web>
 </body>
 
 </html>
