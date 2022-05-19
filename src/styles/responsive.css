@@ -1,0 +1,46 @@
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+  #menu-button,
+  #close-button {
+    display: none;
+  }
+  #navbar .nav {
+    display: block;
+  }
+  #sidebar {
+    display: none;
+  }
+
+  .detail-review,
+  .menus,
+  .card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-list .card-item {
+    margin: 0 1rem 2rem;
+  }
+
+  .nav .nav-link {
+    color: white;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  .detail-review,
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .card-detail .card-thumbnail img {
+    height: 500px;
+  }
+}
