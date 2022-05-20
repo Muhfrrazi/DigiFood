@@ -241,9 +241,9 @@ header {
 /* card item */
 
 .card-item .card-title {
-  margin-bottom: 0;
-  margin-top: 10px;
-  font-family: "Nunito", sans-serif;
+  margin: 2rem 0;
+  font-weight: bold;
+  font-family: "poppins", sans-serif;
 }
 
 .card-item .card-title a {

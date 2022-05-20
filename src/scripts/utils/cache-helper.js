@@ -32,11 +32,10 @@ const CacheHelper = {
   },
 
   async _addCache(request) {
-    if (request.method !== 'POST') {
-      const cache = await this._openCache();
-      cache.add(request);
-    }
+    const cache = await this._openCache();
+    cache.add(request);
   },
+
   async _openCache() {
     return caches.open(CONFIG.CACHE_NAME);
   },
