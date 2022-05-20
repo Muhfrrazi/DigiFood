@@ -11,6 +11,13 @@
   },
   "rules": {
     "quotes": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "max-len": "off",
+    "no-underscore-dangle": "off",
+    "no-undef": "off",
+    "object-curly-newline": "off",
+    "comma-dangle": "off",
+    "indent": "off",
+    "no-console": "off"
   }
 }
