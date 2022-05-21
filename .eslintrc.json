@@ -18,6 +18,8 @@
     "object-curly-newline": "off",
     "comma-dangle": "off",
     "indent": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": 0
   }
 }

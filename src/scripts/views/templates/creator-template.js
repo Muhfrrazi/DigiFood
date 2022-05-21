@@ -6,7 +6,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <div class="card-detail">
     <div class="card-content">
       <div class="card-thumbnail">
-        <img src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" 
+        <img class="lazyload" 
+          data-src="${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId}" 
           alt="Thumbnail ${restaurant.name}">
       </div>
       <div class="card-header">
@@ -88,7 +89,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="card-item">
       <div class="card-thumbnail">
-          <img src="${CONFIG.BASE_IMAGE_URL}small/${restaurant.pictureId}" 
+          <img class="lazyload" 
+            data-src="${CONFIG.BASE_IMAGE_URL}small/${restaurant.pictureId}" 
             alt="Thumbnail ${restaurant.name}">
       </div>
       <div class="card-content container">
@@ -106,10 +108,85 @@ const createRestaurantItemTemplate = (restaurant) => `
   </article>
 `;
 
+const createSkeletonRestoTemplate = (count) => {
+  let template = "";
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+    <article class="card-item">
+      <div class="card-thumbnail">
+        <img
+                class="card-thumbnail"
+                width="100%" height="350px" 
+                src="./images/placeholder.png" 
+                alt="placeholder"
+            />
+        </div>
+        <div class="card-content container">
+          <div class="card-header">
+              <span>
+                    <img
+                      class="fa-map-marker-alt"
+                      src="../icons/location-dot-solid.svg"
+                      alt="lokasi resto"
+                      width="18px"
+                      height="18px"
+                    /> 
+                Lorem Lorem ipsum dolor sit
+              </span>
+              <span>
+                    <img
+                      class="fa-star"
+                      src="../icons/star-solid.svg"
+                      alt="rating resto"
+                      width="18px"
+                      height="18px"
+                    />
+                    xx
+              </span>
+          </div>
+          <h3 class="card-title">
+            Lorem Lorem ipsum dolor sit
+          </h3>
+          <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+        </div>
+    </article>
+    `;
+  }
+  return template;
+};
+
+const createSkeletonFactTemplate = (count) => {
+  let template = "";
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+    <article class="card-item">
+            <div class="card-thumbnail">
+                <img
+                    class="card-thumbnail"
+                    width="100%" height="350px" 
+                    src="./images/placeholder.png" 
+                    alt="placeholder"
+                />
+            </div>
+            <div class="card-content">
+            <h3 class="card-title">
+                Lorem Lorem ipsum dolor sit
+            </h3>
+            <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+            </div>
+        </article>
+  `;
+  }
+  return template;
+};
+
 const createFactItemTemplate = (foodfact) => `
  <article class="card-item">
             <div class="card-thumbnail">
-                <img src="${foodfact.pictureId}" alt="Thumbnail ${foodfact.name}">
+            <img class="lazyload" 
+              data-src="${foodfact.pictureId}" alt="Thumbnail ${foodfact.name}">
             </div>
             <div class="card-content">
                 <h3 class="card-title"><a href="#">${foodfact.name}</a></h3>
@@ -119,15 +196,15 @@ const createFactItemTemplate = (foodfact) => `
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="far fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fas fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createFactItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createSkeletonRestoTemplate, createSkeletonFactTemplate, createFactItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate };

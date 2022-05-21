@@ -1,5 +1,5 @@
 import RestaurantResource from "../../data/restaurant-source";
-import { createFactItemTemplate, createRestaurantItemTemplate } from "../templates/creator-template";
+import { createFactItemTemplate, createRestaurantItemTemplate, createSkeletonRestoTemplate, createSkeletonFactTemplate } from "../templates/creator-template";
 import Fact from "../../data/facts.json";
 
 const Home = {
@@ -11,12 +11,12 @@ const Home = {
       
       </div>
       <section id="card-list" class="card-list">
-
+      ${createSkeletonRestoTemplate(6)}
       </section>
 
       <h2 class="content-title">Food Fact <span class="content-desc"><br>Fun Fact About All Foods</span></h2>
-      <section id="fact-list" class="card-list fact">
-
+      <section id="fact-list" class="card-list fact"> 
+      ${createSkeletonFactTemplate(3)}
       </section>
     </div>
     `;
