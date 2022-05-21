@@ -103,7 +103,7 @@ header {
   font-size: 2.5rem;
   font-weight: bold;
   color: #f1d00a;
-  font-family: "Saira", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 5px;
 }
 
@@ -430,7 +430,7 @@ form {
   padding: 1rem;
   color: white;
   display: flex;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   align-items: center;
   text-align: center;
   justify-content: center;
