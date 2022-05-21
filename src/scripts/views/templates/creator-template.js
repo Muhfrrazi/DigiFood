@@ -72,13 +72,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </div>
   <div class="form-review">
     <form>
-      <div class="mb-3">
+      <div class="mb-3 form-row">
         <label for="inputName" class="form-label">Name</label>
         <input name="inputName" type="text" class="form-control" id="inputName">
       </div>
-      <div class="mb-3">
+      <div class="mb-3 form-row">
         <label for="inputReview" class="form-label">Review</label>
-        <input name="inputReview" type="text" class="form-control" id="inputReview">
+        <textarea name="inputReview" type="text" class="form-control" id="inputReview" style="resize: none; min-height: 150px;"> </textarea>
       </div>
       <button id="submit-review" type="submit" class="btn2">Submit</button>
     </form>

@@ -1,30 +1,36 @@
 const assert = require("assert");
 
-Feature("Review Resto");
+Feature("Add Review Restaurant");
 
-// Perintah berjalan sebelum tiap metode tes dijalankan
 Before(({ I }) => {
-  // root URL : http:localhost:9000
   I.amOnPage("/");
 });
 
-Scenario("Post resto review", async ({ I }) => {
-  const reviewText = "Automated reviewww";
-
-  // URL: /
+Scenario("Adding Review restaurant", async ({ I }) => {
+  I.seeElement(".card-item");
   I.seeElement(".card-title a");
-  I.click(locate(".card-title a").first());
 
-  // URL: /resto/:id
-  I.seeElement(".form-review form");
-  I.fillField("inputName", "E2E testing");
-  I.fillField("inputReview", reviewText);
+  const findResto = locate(".card-title a").first();
+  I.wait(1);
+  I.click(findResto);
+
+  I.seeElement(".form-row");
+  I.seeElement("#inputName");
+  I.fillField("#inputName", "Handa");
+
+  I.seeElement(".form-row");
+  I.seeElement("#inputReview");
+  I.fillField("#inputReview", "Tidak Ramah Bintang 1");
+
+  I.seeElement("#submit-review");
   I.click("#submit-review");
 
-  // after submit review
-  // I.refreshPage();
-  I.waitForResponse("https://restaurant-api.dicoding.dev/review");
-  const lastReview = locate(".review-body").last();
-  const lastReviewText = await I.grabTextFrom(lastReview);
-  assert.strictEqual(reviewText, lastReviewText.trim());
+  const getName = locate(".review-name").last();
+  const checkInput = await I.grabTextFrom(getName);
+
+  const getReview = locate(".review-body").last();
+  const checkReview = await I.grabTextFrom(getReview);
+
+  assert.strictEqual(checkInput, "Handa");
+  assert.strictEqual(checkReview, "Tidak Ramah Bintang 1");
 });
