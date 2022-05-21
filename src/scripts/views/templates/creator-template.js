@@ -115,11 +115,12 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 
 const createSkeletonRestoTemplate = (count) => {
+  const firstBox = (numbIndex) => numbIndex === 0 && count % 2 !== 0;
   let template = "";
 
   for (let i = 0; i < count; i += 1) {
     template += `
-    <article class="card-item">
+    <article class="card-item ${firstBox(i) ? "box-ganjil" : ""}">
       <div class="card-thumbnail">
         <img
                 class="card-thumbnail"

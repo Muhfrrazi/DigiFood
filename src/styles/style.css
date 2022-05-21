@@ -472,6 +472,7 @@ form {
 
 #footer {
   padding: 1rem;
+  margin-top: 1rem;
   color: white;
   display: flex;
   font-family: "Roboto", sans-serif;
