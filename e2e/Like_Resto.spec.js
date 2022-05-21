@@ -8,25 +8,25 @@ Before(({ I }) => {
 
 Scenario("showing empty liked restaurants", ({ I }) => {
   I.seeElement("#restaurants");
-  I.see(`You don't have any Favorite Cafe or Restaurantt`, "#restaurants");
+  I.see(`You don't have any Favorite Cafe or Restaurant`, "#restaurants");
 });
 
 Scenario("Liking a restaurant", async ({ I }) => {
-  I.see("You don't have any Favorite Cafe or Restaurant", "#restaurants");
+  I.see(`You don't have any Favorite Cafe or Restaurant`, "#restaurants");
 
   I.amOnPage("/");
-  I.wait(1);
+  I.wait(3);
 
   I.seeElement(".card-item");
   I.seeElement(".card-title a");
 
   const firstResto = locate(".card-title a").first();
   const firstRestoTitle = await I.grabTextFrom(firstResto);
-  I.wait(1);
+  I.wait(3);
   I.click(firstResto);
 
   I.seeElement("#likeButton");
-  I.wait(1);
+  I.wait(3);
   I.click("#likeButton");
 
   I.amOnPage("/#/favorites");
