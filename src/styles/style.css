@@ -283,7 +283,6 @@ header {
   font-size: 1em;
 }
 
-.detail-review,
 .menus,
 .card-list {
   gap: 1rem;
@@ -334,31 +333,76 @@ header {
   text-align: justify;
 }
 
-.detail-review .detail-review-item {
-  border-radius: 5px;
-  padding: 1.5rem;
-  box-shadow: 0 0 3px 1px #00000047;
+/* review */
+.heading-text {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 12px;
+  text-align: center;
 }
 
-.detail-review-item .review-header {
+.posts-review {
+  margin: 34px auto auto;
+  text-align: left;
+}
+
+.card-review {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.comment-review__content {
+  padding: 18px 18px 28px;
+}
+
+.comment-item__content {
+  padding: 18px;
+}
+
+.comment-item__avatar {
   display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 6px;
 }
 
-.detail-review-item .review-header i {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-  color: #7f7a7a85;
+.comment-item__avatar .img-avatar {
+  object-fit: cover;
+  border: 1px solid #035397;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+  padding: 1px;
+  margin-top: 6px;
 }
 
-.detail-review-item .review-header .review-name {
-  font-weight: bold;
+.comment-item__title {
+  margin-left: 1.2rem;
+  margin-top: 0.4rem;
 }
 
-.detail-review-item .review-header .review-date {
-  font-size: 13px;
+.comment-item__title h1 {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 15px 10px 0;
+  margin: -10px 0 0 0;
 }
+
+.comment-item__title p {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.comment-item__description {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* like */
 
 .like {
   font-size: 18px;

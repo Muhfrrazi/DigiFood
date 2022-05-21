@@ -45,43 +45,49 @@ const createRestaurantDetailTemplate = (restaurant) => `
           </ul>
         </div>
       </div>
-      <div class="reviews">
-        <h3>Customer Reviews</h3>
-        <div class="detail-review">
-          ${restaurant.customerReviews
-            .map(
-              (review) => `
-            <div class="detail-review-item">
-              <div class="review-header">
-                  <i class="fa fa-user-circle"></i> 
-                  <div>
-                    <span class="review-name">${review.name}</span> .
-                    <span class="review-date">${review.date}</span>
-                  </div>
-              </div>
-              <div class="review-body">
-                ${review.review}
+      
+      <p class="heading-text">What your review about "${restaurant.name}" ?</p>
+      
+      <div class="form-review">
+        <form>
+          <div class="mb-3 form-row">
+            <label for="inputName" class="form-label">Name</label>
+            <input name="inputName" type="text" class="form-control" id="inputName">
+          </div>
+          <div class="mb-3 form-row">
+            <label for="inputReview" class="form-label">Review</label>
+            <textarea name="inputReview" type="text" class="form-control" id="inputReview" style="resize: none; min-height: 150px;"> </textarea>
+          </div>
+          <button id="submit-review" type="submit" class="btn2">Submit</button>
+        </form>
+      </div>
+
+      <p class="heading-text">What their reviews about "${restaurant.name}" ?</p>
+      <div class="posts-review" id="review">
+      ${restaurant.customerReviews
+        .map(
+          (comment) => `
+        <article class="card-review">
+          <div class=".comment-review__content">
+            <div class="comment-item__avatar">
+              <img
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                class="img-avatar"
+                alt="avatar profile reviewer"
+              />
+              <div class="comment-item__title">
+                <h1 tabindex="0">${comment.name}</h1>
+                <p>Tanggal Review: ${comment.date}</p>
               </div>
             </div>
-          `
-            )
-            .join("")}
-        </div>
+            <p class="comment-item__description">${comment.review}</p>
+          </div>
+        </article>
+        `
+        )
+        .join("")}
       </div>
     </div>
-  </div>
-  <div class="form-review">
-    <form>
-      <div class="mb-3 form-row">
-        <label for="inputName" class="form-label">Name</label>
-        <input name="inputName" type="text" class="form-control" id="inputName">
-      </div>
-      <div class="mb-3 form-row">
-        <label for="inputReview" class="form-label">Review</label>
-        <textarea name="inputReview" type="text" class="form-control" id="inputReview" style="resize: none; min-height: 150px;"> </textarea>
-      </div>
-      <button id="submit-review" type="submit" class="btn2">Submit</button>
-    </form>
   </div>
 </article>
 `;
