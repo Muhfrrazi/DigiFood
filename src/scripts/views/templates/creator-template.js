@@ -1,5 +1,3 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable indent */
 import CONFIG from "../../globals/config";
 
 const createRestaurantDetailTemplate = (restaurant) => `
@@ -101,7 +99,7 @@ const createRestaurantItemTemplate = (restaurant) => `
               <span><i class="fas fa-star"></i> ${restaurant.rating}</span>
           </div>
           <h3 class="card-title">
-            <a href="#/detail/${restaurant.id}" target="#restaurant">${restaurant.name}</a>
+            <a href="#/detail/${restaurant.id}" target="_self">${restaurant.name}</a>
           </h3>
           <p class="card-description">${restaurant.description}</p>
       </div>

@@ -7,7 +7,7 @@ class NavWeb extends HTMLElement {
     this.innerHTML = `
     <div class="container" id="container">
             <nav id="navbar">
-                <a href="#" class="navbar-brand">DF</a>
+                <a href="/" class="navbar-brand">DF</a>
                 <button id="menu-button" aria-label="navigation-menu"><i class="fas fa-bars"></i></button>
                 <div class="nav">
                     <a class="nav-link" href="#/home">Home</a>

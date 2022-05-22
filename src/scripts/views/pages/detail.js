@@ -12,7 +12,6 @@ const Detail = {
     <div id="loading"></div>
     <div class="main">
     <div id="restaurant" class="restaurant container"></div>
-    
       <section id="detail-rest"></section>
       <div class="like" id="likeButtonContainer"></div>
     </div>
@@ -26,9 +25,9 @@ const Detail = {
     loading.innerHTML = '<div class="loader"></div>';
 
     try {
-      const restaurant = await ResrtaurentSource.detailRestaurant(url.id);
+      const restaurant = await RestaurantSource.detailRestaurant(url.id);
       const restaurantContainer = document.querySelector("#detail-rest");
-      
+
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant);
 
       LikeButtonInitiator.init({

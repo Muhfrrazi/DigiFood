@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import RestaurantResource from "../../data/restaurant-source";
 import { createFactItemTemplate, createRestaurantItemTemplate } from "../templates/creator-template";
 import Fact from "../../data/facts.json";

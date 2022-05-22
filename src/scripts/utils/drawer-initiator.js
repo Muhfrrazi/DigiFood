@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const DrawerInitiator = {
   init({ menuButton, closeButton, sideBar }) {
     menuButton.addEventListener("click", (event) => {
