@@ -15,11 +15,12 @@
     "max-len": "off",
     "no-underscore-dangle": "off",
     "no-undef": "off",
+    "no-alert": "off",
     "object-curly-newline": "off",
     "comma-dangle": "off",
     "indent": "off",
     "no-console": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": "off"
   }
 }

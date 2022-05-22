@@ -29,6 +29,13 @@
   .nav .nav-link {
     color: white;
   }
+
+  .hero .hero-text h1 {
+    font-size: 70px;
+  }
+  .hero .hero-text p {
+    font-size: 25px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -69,5 +76,10 @@
   .comment-item__description {
     font-size: 16px;
   }
-
+  .hero .hero-text h1 {
+    font-size: 100px;
+  }
+  .hero .hero-text p {
+    font-size: 35px;
+  }
 }

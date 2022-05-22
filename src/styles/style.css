@@ -21,6 +21,21 @@ button {
   min-height: 44px;
 }
 
+.btn2 {
+  background-color: #21325e;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background-color: white;
+  border-radius: 25px;
+  color: #21325e;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+}
 #loading {
   display: flex;
   justify-content: center;
@@ -176,38 +191,39 @@ header {
 
 /* Hero */
 
-#hero {
-  display: grid;
-  width: 100%;
-  min-height: 380px;
-  background: url(../public/images/heros/hero-image_2.jpg) center no-repeat;
-  background-size: cover;
+.hero {
   position: relative;
+}
+
+.hero img {
+  background-color: #6bcb77;
+  filter: brightness(50%);
+  display: flex;
+  flex-direction: column;
+  object-position: center;
   margin-top: 4rem;
+  object-fit: cover;
+  -webkit-user-drag: none;
 }
 
-#hero .hero-content {
-  display: grid;
-  align-items: center;
-  align-content: center;
+.hero .hero-text {
   text-align: center;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#hero .hero-content .hero-title {
-  color: white;
-  font-size: 100px;
-  margin: 0.5rem 0;
-  font-family: "Bebas Neue", cursive;
+.hero h1 {
+  font-size: 50px;
+  margin: 0;
+  font-family: "bebas-neue", sans-serif;
   text-shadow: 5px 5px #f1d00a;
 }
 
-#hero .hero-content .hero-tag {
-  color: white;
-  font-size: 25px;
-  margin: 0;
-  font-family: initial;
+.hero p {
+  font-size: 20px;
 }
 
 /* Container */
