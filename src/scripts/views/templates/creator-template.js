@@ -114,81 +114,6 @@ const createRestaurantItemTemplate = (restaurant) => `
   </article>
 `;
 
-const createSkeletonRestoTemplate = (count) => {
-  const firstBox = (numbIndex) => numbIndex === 0 && count % 2 !== 0;
-  let template = "";
-
-  for (let i = 0; i < count; i += 1) {
-    template += `
-    <article class="card-item ${firstBox(i) ? "box-ganjil" : ""}">
-      <div class="card-thumbnail">
-        <img
-                class="card-thumbnail"
-                width="100%" height="350px" 
-                src="./images/placeholder.png" 
-                alt="placeholder"
-            />
-        </div>
-        <div class="card-content container">
-          <div class="card-header">
-              <span>
-                    <img
-                      class="fa-map-marker-alt"
-                      src="../icons/location-dot-solid.svg"
-                      alt="lokasi resto"
-                      width="18px"
-                      height="18px"
-                    /> 
-                Lorem Lorem ipsum dolor sit
-              </span>
-              <span>
-                    <img
-                      class="fa-star"
-                      src="../icons/star-solid.svg"
-                      alt="rating resto"
-                      width="18px"
-                      height="18px"
-                    />
-                    xx
-              </span>
-          </div>
-          <h3 class="card-title">
-            Lorem Lorem ipsum dolor sit
-          </h3>
-          <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
-        </div>
-    </article>
-    `;
-  }
-  return template;
-};
-
-const createSkeletonFactTemplate = (count) => {
-  let template = "";
-
-  for (let i = 0; i < count; i += 1) {
-    template += `
-    <article class="card-item">
-            <div class="card-thumbnail">
-                <img
-                    class="card-thumbnail"
-                    width="100%" height="350px" 
-                    src="./images/placeholder.png" 
-                    alt="placeholder"
-                />
-            </div>
-            <div class="card-content">
-            <h3 class="card-title">
-                Lorem Lorem ipsum dolor sit
-            </h3>
-            <p class="card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
-            </div>
-        </article>
-  `;
-  }
-  return template;
-};
-
 const createFactItemTemplate = (foodfact) => `
  <article class="card-item">
             <div class="card-thumbnail">
@@ -214,4 +139,4 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createSkeletonRestoTemplate, createSkeletonFactTemplate, createFactItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createFactItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate };

@@ -5,6 +5,8 @@ Before(({ I }) => {
 });
 
 Scenario("Adding Review restaurant", async ({ I }) => {
+  const reviewText = "Automated reviewww";
+
   I.wait(5);
 
   I.seeElement(".card-item");
@@ -15,12 +17,12 @@ Scenario("Adding Review restaurant", async ({ I }) => {
 
   I.seeElement(".form-row");
   I.seeElement("#inputName");
-  I.fillField("#inputName", "Automatic review");
+  I.fillField("#inputName", "E2E review");
   I.wait(5);
 
   I.seeElement(".form-row");
   I.seeElement("#inputReview");
-  I.fillField("#inputReview", "test");
+  I.fillField("#inputReview", reviewText);
   I.wait(5);
 
   I.seeElement("#submit-review");

@@ -9,18 +9,31 @@ Scenario("showing empty liked restaurants", ({ I }) => {
   I.see(`You don't have any Favorite Cafe or Restaurant`, "#restaurants");
 });
 
-Scenario("Liking a restaurant", async ({ I }) => {
+Scenario("like and unlike one resto", async ({ I }) => {
   I.amOnPage("/");
-  I.wait(5);
-
-  I.seeElement(".card-item");
-  I.wait(5);
-
-  I.click(locate(".card-item a").first());
-  I.wait(5);
-
-  I.seeElement("#likeButton");
   I.wait(3);
 
+  I.seeElement(".card-item");
+  I.click(locate(".card-item a").first());
+  I.wait(3);
+
+  I.seeElement("#likeButton");
   I.click("#likeButton");
+  I.wait(3);
+
+  I.amOnPage("/#/favorite");
+  I.wait(3);
+
+  I.seeElement(".card-item");
+  I.click(locate(".card-item a").first());
+  I.wait(3);
+
+  I.seeElement("#likeButton");
+  I.click("#likeButton");
+  I.wait(3);
+
+  I.amOnPage("/#/favorite");
+  I.wait(3);
+
+  I.see(`You don't have any Favorite Cafe or Restaurant`, "#restaurants");
 });
