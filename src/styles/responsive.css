@@ -1,4 +1,8 @@
 /* Medium devices (landscape tablets, 768px and up) */
+.posts-review {
+  display: grid;
+  grid-row-gap: 18px;
+}
 
 @media only screen and (min-width: 768px) {
   #menu-button,
@@ -25,6 +29,13 @@
   .nav .nav-link {
     color: white;
   }
+
+  .hero .hero-text h1 {
+    font-size: 70px;
+  }
+  .hero .hero-text p {
+    font-size: 25px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -42,5 +53,33 @@
 
   .card-detail .card-thumbnail img {
     height: 500px;
+  }
+
+  .comment-review__content {
+    padding: 30px;
+  }
+
+  .comment-item__avatar .img-avatar {
+    width: 65px;
+    height: 65px;
+    margin-top: 0;
+  }
+
+  .comment-item__title h1 {
+    font-size: 18px;
+  }
+
+  .comment-item__title p {
+    font-size: 14px;
+  }
+
+  .comment-item__description {
+    font-size: 16px;
+  }
+  .hero .hero-text h1 {
+    font-size: 100px;
+  }
+  .hero .hero-text p {
+    font-size: 35px;
   }
 }

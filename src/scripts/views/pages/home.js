@@ -11,12 +11,11 @@ const Home = {
       
       </div>
       <section id="card-list" class="card-list">
-
       </section>
 
       <h2 class="content-title">Food Fact <span class="content-desc"><br>Fun Fact About All Foods</span></h2>
-      <section id="fact-list" class="card-list fact">
-
+      <section id="fact-list" class="card-list fact"> 
+      
       </section>
     </div>
     `;

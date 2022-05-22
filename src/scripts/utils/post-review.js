@@ -9,11 +9,11 @@ const PostReview = (url, name, review) => {
   };
   RestaurantSource.postRestaurant(dataInput);
 
-  const reviewContainer = document.querySelector(".detail-review");
+  const reviewContainer = document.querySelector(".card-review");
   const options = { year: "numeric", month: "long", day: "numeric" };
   const date = new Date().toLocaleDateString("id-ID", options);
   const newReview = `
-    <div class="detail-review-item">
+    <div class="card-review">
       <div class="review-header">
         <p class="review-name"><i title="restaurant" class="fa fa-user-circle" style="font-size:1.3em;"></i>&nbsp;${name}&nbsp;&nbsp;</p>
         <p class="review-date">${date}</p>

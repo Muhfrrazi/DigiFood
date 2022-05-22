@@ -61,6 +61,7 @@ const Detail = {
         reviewInput.value = "";
       } else {
         PostReview(url, nameInput.value, reviewInput.value);
+        alert("Yeayy, Review berhasil ditambahkan");
         nameInput.value = "";
         reviewInput.value = "";
       }
