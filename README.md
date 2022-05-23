@@ -41,8 +41,10 @@ npm run start-dev
 ```
 npm run build
 ```
+## Uji Lighthouse
+![image](https://user-images.githubusercontent.com/90432021/169755039-f4e4e8ec-7c11-47b3-b97e-cde66ff8c832.png)
 
-
+## Tampilan Website
 ![image](https://user-images.githubusercontent.com/90432021/169683280-f1569311-9d37-4871-b0ac-da078f7c8630.png)
 ![image](https://user-images.githubusercontent.com/90432021/169683311-0407a046-6bd3-429c-8237-92e2f31bba73.png)
 ![image](https://user-images.githubusercontent.com/90432021/169683334-d4617f51-d5ae-4ed7-9645-3393e4e56f04.png)
